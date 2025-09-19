@@ -9,7 +9,6 @@
 }
 
 :root {
-  --color-primario: ##8ea8e6;
   --color-bandera: #212121;
   --fuente-principal: sans-serif;
   --subtitulos: 50px;
@@ -713,5 +712,43 @@ main {
 /* Footer */
 
 footer {
-  background-color: rgb(175, 54, 54);
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 20px 50px;
+
+  img {
+    height: 30px;
+  }
+
+  .footer-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 80%;
+    padding: 50px 0px;
+
+    .footer-info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  }
+
+  .info-mia {
+
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+
+    h5 {
+      font-weight: lighter;
+    }
+  }
 }
