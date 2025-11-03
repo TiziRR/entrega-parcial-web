@@ -1,174 +1,87 @@
-# 🌊 HITOCEAN Clone (Educacional)
+# 🌊 HITOCEAN Clone (Proyecto Educativo Full-Stack)
 
-![Badge de Estado](https://img.shields.io/badge/STATUS-Completado%20)
-![Badge de Tecnolog%C3%ADas](https://img.shields.io/badge/Tecnolog%C3%ADas-Node.js%2C%20Express%2C%20TypeScript%2C%20SQLite3%2C%20HTML%2FCSS-informational)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html)
 
-## 🌟 Descripción del Proyecto
+## 📌 Resumen del Proyecto
 
-Este proyecto es una **copia con fines educativos** de la página web oficial de [**HITOCEAN**](https://hitocean.com/en/). Su objetivo es demostrar la implementación de una aplicación **Full-Stack** utilizando tecnologías modernas.
+Este repositorio contiene una réplica **con fines educativos** de la página web oficial de [**HITOCEAN**](https://hitocean.com/en/).
 
-### Tecnologías Clave Usadas:
+El proyecto está diseñado como una aplicación **Full-Stack** (Cliente-Servidor) y sirve como ejercicio para integrar las siguientes tecnologías:
 
-| Componente | Tecnologías | Propósito |
+| Componente | Tecnologías Clave | Base de Datos |
 | :--- | :--- | :--- |
-| **Backend** | **Node.js, Express, TypeScript, SQLite3** | Manejo de la lógica del servidor, API REST y base de datos. |
-| **Frontend** | **HTML, CSS, JavaScript (Vanilla)** | Interfaz de usuario y lógica del lado del cliente. |
+| **Backend** | Node.js, Express.js, TypeScript | SQLite3 (`usuarios.db`) |
+| **Frontend** | HTML, CSS, JavaScript (Vanilla) | N/A |
 
+## ⚙️ Configuración y Puesta en Marcha
 
+Sigue estos pasos para obtener una copia local del proyecto y poner a funcionar el servidor (Backend) y el cliente (Frontend).
 
-## 🚀 Empezando
+### 1. Prerrequisitos
 
-Sigue estas instrucciones para obtener una copia del proyecto y ponerlo en funcionamiento en tu máquina local.
+Asegúrate de tener instalado **Node.js** (se recomienda la versión LTS) y **npm** en tu máquina.
 
-### 📋 Prerrequisitos
+### 2. Clonación
 
-Necesitarás tener instalado lo siguiente en tu sistema:
+Clona el repositorio en tu máquina local:
 
-* **Node.js** (Se recomienda la versión LTS)
-* **npm** (Gestor de paquetes de Node.js, viene incluido con Node.js)
-* Un editor de código (ej: VS Code).
+```
+git clone [https://github.com/TiziRR/entrega-parcial-web.git](https://github.com/TiziRR/entrega-parcial-web.git) 
+cd HITOCEAN 
+```
 
-### 🛠️ Instalación y Configuración
-
-1.  **Clonar el Repositorio:**
-    ```bash
-    git clone https://github.com/TiziRR/entrega-parcial-web.git
-    cd HITOCEAN
-    ```
-
-2.  **Configurar el Backend:**
-    El backend se encuentra en la carpeta `backend/` y está desarrollado en **TypeScript**.
-
-    a. **Instalar Dependencias:**
-    ```bash
-    cd backend
-    npm install
-    ```
-
-    b. **Compilar el Código:**
-    Aunque el comando `dev` usa `ts-node-dev`, es buena práctica saber compilar el proyecto. Esto genera los archivos JavaScript en la carpeta `dist/`.
-    ```bash
-    npm run build
-    ```
-
-## ⚙️ Uso y Comandos
-
-Debes iniciar el **Backend** y el **Frontend** por separado para que la aplicación funcione completamente.
-
-### 1. Iniciar el Backend (Servidor API)
-
-Para el desarrollo, utiliza el comando `dev`. Esto inicia el servidor y lo reinicia automáticamente al detectar cambios en los archivos `.ts`.
-
-| Comando | Descripción |
-| :--- | :--- |
-| `npm run dev` | **Recomendado para desarrollo.** Inicia el servidor usando `ts-node-dev` para recargas en vivo. |
-| `npm start` | Inicia el servidor de producción desde los archivos compilados en `dist/`. Útil después de `npm run build`. |
-
-**Ejecución:**
-
-```bash
-# Asegúrate de estar en la carpeta 'backend'
+### 3. Instalación del BackendEl Backend gestiona la API y la conexión a la base de datos (SQLite3).
+```
 cd backend
+npm install
+```
+
+### 4. Ejecución del Proyecto (Flujo Integrado)
+Para desarrollar y probar la aplicación, es necesario ejecutar tanto el servidor (Backend) como el cliente (Frontend).
+
+Paso A: Iniciar el Servidor API (Backend)
+Utiliza el siguiente comando para iniciar el servidor de desarrollo, que soporta la recarga automática (hot-reload) gracias a ts-node-dev.
+```
+// Estando en la carpeta 'backend'
 npm run dev
-El servidor API se ejecutará en http://localhost:[PUERTO_DEFINIDO] (ej: 3000 o 8080).
+```
+El servidor Express se iniciará en modo desarrollo y escuchará en el puerto configurado.
 
-### 2. Iniciar el Frontend (Web)
+Paso B: Abrir la Interfaz de Usuario (Frontend)
+
+El Frontend es un conjunto de archivos estáticos (HTML, CSS, JS) que se comunican con el Backend.
+ - Abre una nueva ventana del explorador de archivos.
+ - Navega hasta la carpeta frontend/.Haz doble clic en el archivo views/index.html para abrir la aplicación en tu navegador.
+   Nota: Para desarrollo más avanzado o evitar problemas de CORS, se recomienda usar una extensión de servidor local como "Live Server" en VS Code.
 
 
-¡Perfecto! Con la estructura de carpetas y el contenido del archivo package.json, tengo toda la información necesaria para crear un README.md claro y completo.
+🛠️ Comandos de Desarrollo del Backend
 
-Este README explica qué es el proyecto, cómo configurarlo e instalarlo, y los comandos necesarios para poner en marcha el frontend y el backend.
+Comando,Función,Descripción
+npm run dev,Inicio en Desarrollo,Inicia el servidor usando ts-node-dev. Reinicia automáticamente al detectar cambios en archivos src/**/*.ts.
+npm run build,Compilación,Transpila los archivos de TypeScript (src/) a JavaScript y los guarda en la carpeta dist/.
+npm start,Inicio en Producción,Ejecuta el código ya compilado desde la carpeta dist/ (node dist/index.js).
+npm install,Dependencias,Instala todas las dependencias listadas en package.json.
 
-📝 Borrador del Archivo README.md
-Aquí tienes el contenido en formato Markdown:
+🌳 Estructura de Carpetas
 
-Markdown
-# 🌊 HITOCEAN Clone (Educacional)
-
-![Badge de Estado](https://img.shields.io/badge/STATUS-Completado%20o%20En%20Desarrollo-blue)
-![Badge de Tecnolog%C3%ADas](https://img.shields.io/badge/Tecnolog%C3%ADas-Node.js%2C%20Express%2C%20TypeScript%2C%20SQLite3%2C%20HTML%2FCSS-informational)
-
-## 🌟 Descripción del Proyecto
-
-Este proyecto es una **copia con fines educativos** de la página web oficial de [**HITOCEAN**](https://hitocean.com/en/). Su objetivo es demostrar la implementación de una aplicación **Full-Stack** utilizando tecnologías modernas.
-
-### Tecnologías Clave Usadas:
-
-| Componente | Tecnologías | Propósito |
-| :--- | :--- | :--- |
-| **Backend** | **Node.js, Express, TypeScript, SQLite3** | Manejo de la lógica del servidor, API REST y base de datos. |
-| **Frontend** | **HTML, CSS, JavaScript (Vanilla)** | Interfaz de usuario y lógica del lado del cliente. |
-
-## 🚀 Empezando
-
-Sigue estas instrucciones para obtener una copia del proyecto y ponerlo en funcionamiento en tu máquina local.
-
-### 📋 Prerrequisitos
-
-Necesitarás tener instalado lo siguiente en tu sistema:
-
-* **Node.js** (Se recomienda la versión LTS)
-* **npm** (Gestor de paquetes de Node.js, viene incluido con Node.js)
-* Un editor de código (ej: VS Code).
-
-### 🛠️ Instalación y Configuración
-
-1.  **Clonar el Repositorio:**
-    ```bash
-    git clone [https://www.youtube.com/watch?v=t_yOKbQkgPo](https://www.youtube.com/watch?v=t_yOKbQkgPo)
-    cd HITOCEAN
-    ```
-
-2.  **Configurar el Backend:**
-    El backend se encuentra en la carpeta `backend/` y está desarrollado en **TypeScript**.
-
-    a. **Instalar Dependencias:**
-    ```bash
-    cd backend
-    npm install
-    ```
-
-    b. **Compilar el Código:**
-    Aunque el comando `dev` usa `ts-node-dev`, es buena práctica saber compilar el proyecto. Esto genera los archivos JavaScript en la carpeta `dist/`.
-    ```bash
-    npm run build
-    ```
-
-3.  **Configurar el Frontend:**
-    El frontend se encuentra en la carpeta `frontend/` y no requiere pasos de instalación adicionales, ya que usa HTML, CSS y JS puro.
-
-    ```bash
-    cd ../frontend
-    # No se requiere instalación aquí
-    ```
-
-## ⚙️ Uso y Comandos
-
-Debes iniciar el **Backend** y el **Frontend** por separado para que la aplicación funcione completamente.
-
-### 1. Iniciar el Backend (Servidor API)
-
-Para el desarrollo, utiliza el comando `dev`. Esto inicia el servidor y lo reinicia automáticamente al detectar cambios en los archivos `.ts`.
-
-| Comando | Descripción |
-| :--- | :--- |
-| `npm run dev` | **Recomendado para desarrollo.** Inicia el servidor usando `ts-node-dev` para recargas en vivo. |
-| `npm start` | Inicia el servidor de producción desde los archivos compilados en `dist/`. Útil después de `npm run build`. |
-
-**Ejecución:**
-
-```bash
-# Asegúrate de estar en la carpeta 'backend'
-cd backend
-npm run dev
-El servidor API se ejecutará en http://localhost:[PUERTO_DEFINIDO] (ej: 3000 o 8080).
-
-### Iniciar el Frontend (Web)
-El frontend es una aplicación de navegador simple.
-
-Navega a la carpeta del frontend:
-
-Bash
-
-cd frontend
-Abrir en el Navegador: Abre el archivo index.html haciendo doble clic en él o usa una extensión de servidor web local (como "Live Server" en VS Code) para evitar problemas de CORS y rutas.
+HITOCEAN/
+├── backend/                  # Servidor API (Node.js/Express/TypeScript)
+│   ├── dist/                 # Código JavaScript compilado (Producción)
+│   ├── node_modules/         # Dependencias del Backend
+│   ├── src/                  # Archivos fuente TypeScript
+│   │   ├── routes/           # Definición de las rutas de la API
+│   │   ├── db.ts             # Lógica de conexión a SQLite
+│   │   └── index.ts          # Punto de entrada principal del servidor
+│   ├── package.json          # Metadatos y scripts de Node.js
+│   ├── tsconfig.json         # Configuración del compilador TypeScript
+│   └── usuarios.db           # Base de datos SQLite3
+│
+└── frontend/                 # Interfaz de Usuario (Cliente)
+    ├── assets/               # Imágenes, fuentes u otros recursos
+    ├── data/                 # Archivos de datos estáticos (JSON, etc.)
+    ├── styles/               # Hojas de estilo CSS
+    └── views/                # Archivos HTML (index.html, etc.)
