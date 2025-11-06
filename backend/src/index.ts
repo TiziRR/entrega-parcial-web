@@ -14,10 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 // Servir los archivos estáticos del frontend
 app.use(express.static(path.join(__dirname, "../../frontend")));
 
-// Rutas API
 app.use("/api/usuarios", usersRouter);
 
-// Rutas específicas para las páginas HTML
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../../frontend/views/hitocean.html"));
 });
